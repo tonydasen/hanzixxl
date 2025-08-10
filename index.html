@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉字消消乐 - 三消版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>汉字消消乐</h1>
+            <div class="game-info">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="moves">步数: <span id="moves">0</span></div>
+                <div class="time">时间: <span id="time">0</span>秒</div>
+            </div>
+            <button id="start-btn">开始游戏</button>
+            <button id="restart-btn" style="display: none;">重新开始</button>
+            <button id="hint-btn" style="display: none;">提示</button>
+        </div>
+        <div class="game-board" id="game-board">
+            <!-- 游戏板将通过JavaScript动态生成 -->
+        </div>
+    </div>
+    <div class="game-over" id="game-over">
+        <div class="game-over-content">
+            <h2>游戏结束</h2>
+            <p>你的得分: <span id="final-score">0</span></p>
+            <button id="play-again-btn">再玩一次</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
