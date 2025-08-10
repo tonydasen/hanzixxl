@@ -1,3 +1,10 @@
+// 音效（可替换为本地文件）
+const soundSwap = new Audio('swap.wav');
+const soundMatch = new Audio('https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae7b2.mp3');
+const soundHint  = new Audio('hint.wav');
+const soundOver  = new Audio('gameover.wav');
+
+
 // 汉字与类型一一对应
 const HANZI = ['火', '土', '木', '水', '金', '人', '心'];
 const BOARD_SIZE = 8;
@@ -79,6 +86,7 @@ function handleTileClick(i, j) {
     if (selected) {
         const [si, sj] = selected;
         if ((Math.abs(si - i) + Math.abs(sj - j)) === 1) {
+            soundSwap.currentTime = 0; soundSwap.play(); // 交换音效
             swapTiles(si, sj, i, j);
             renderBoard();
             if (findMatches().length > 0) {
@@ -151,6 +159,8 @@ function processMatches() {
         }
         return;
     }
+    soundMatch.currentTime = 0; soundMatch.play(); // 消除音效
+
     // 标记消除
     let toRemove = Array.from({ length: BOARD_SIZE }, () => Array(BOARD_SIZE).fill(false));
     matches.forEach(match => {
@@ -210,6 +220,7 @@ function showHint() {
                 if (ni < BOARD_SIZE && nj < BOARD_SIZE) {
                     swapTiles(i, j, ni, nj);
                     if (findMatches().length > 0) {
+                        soundHint.currentTime = 0; soundHint.play(); // 提示音效
                         highlightHint(i, j, ni, nj);
                         swapTiles(i, j, ni, nj);
                         return;
@@ -283,6 +294,7 @@ function showGameOver() {
     gameActive = false;
     clearInterval(timerInterval);
     finalScoreEl.textContent = score;
+    soundOver.currentTime = 0; soundOver.play(); // 游戏结束音效
     gameOverEl.style.display = 'flex';
 }
 
