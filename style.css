@@ -121,13 +121,18 @@ body {
 }
 
 /* 不同类型的汉字对应不同的背景颜色 */
-.tile-type-0 { background-color: #FF5252; } /* 红色 - 火 */
-.tile-type-1 { background-color: #FFEB3B; } /* 黄色 - 土 */
-.tile-type-2 { background-color: #4CAF50; } /* 绿色 - 木 */
-.tile-type-3 { background-color: #2196F3; } /* 蓝色 - 水 */
-.tile-type-4 { background-color: #9C27B0; } /* 紫色 - 金 */
-.tile-type-5 { background-color: #FF9800; } /* 橙色 - 人 */
-.tile-type-6 { background-color: #E91E63; } /* 粉色 - 心 */
+.tile-type-0 { background-color: #FF5252; } /* 火 */
+.tile-type-1 { background-color: #FFEB3B; } /* 土 */
+.tile-type-2 { background-color: #4CAF50; } /* 木 */
+.tile-type-3 { background-color: #2196F3; } /* 水 */
+.tile-type-4 { background-color: #9C27B0; } /* 金 */
+.tile-type-5 { background-color: #FF9800; } /* 天 */
+.tile-type-6 { background-color: #E91E63; } /* 地 */
+.tile-type-7 { background-color: #00BCD4; } /* 人 */
+.tile-type-8 { background-color: #607D8B; } /* 东 */
+.tile-type-9 { background-color: #8BC34A; } /* 西 */
+.tile-type-10 { background-color: #FFC107; } /* 北 */
+.tile-type-11 { background-color: #795548; } /* 南 */
 
 /* 特殊方块 */
 .tile-special {
