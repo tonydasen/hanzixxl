@@ -1,12 +1,12 @@
 // 音效（可替换为本地文件）
 const soundSwap = new Audio('swap.wav');
-const soundMatch = new Audio('https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae7b2.mp3');
+const soundMatch = new Audio('match.wav');
 const soundHint  = new Audio('hint.wav');
 const soundOver  = new Audio('gameover.wav');
 
 
 // 汉字与类型一一对应
-const HANZI = ['火', '土', '木', '水', '金', '人', '心'];
+const HANZI = ['火', '土', '木', '水', '金', '天', '地','人','东','西','北','南'];
 const BOARD_SIZE = 8;
 const TILE_TYPES = HANZI.length;
 let board = [];
